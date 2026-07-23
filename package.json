@@ -1,12 +1,12 @@
 {
   "name": "@orbitstream/sdk",
   "version": "0.1.0",
-  "description": "OrbitStream — Stripe-like checkout SDK for the Stellar network",
+  "description": "OrbitStream \u2014 Stripe-like checkout SDK for the Stellar network",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch",
+    "build": "node init && tsc",
+    "dev": "node init && tsc --watch",
     "test": "vitest run",
     "test:watch": "vitest"
   },
@@ -22,7 +22,9 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@stellar/stellar-sdk": "^13.3.0"
+    "@stellar/stellar-sdk": "^13.3.0",
+    "dotenv": "^8.2.0",
+    "node-fetch": "^3.3.2"
   },
   "devDependencies": {
     "typescript": "^5",
